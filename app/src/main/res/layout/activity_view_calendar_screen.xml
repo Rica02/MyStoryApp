@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".ViewCalendarScreen">
+
+    <SearchView
+        android:id="@+id/searchViewEntries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@xml/border"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/stringSearchEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSeeAllEntries"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="clickSeeAllEntries"
+        android:text="@string/stringSeeAllEntries"
+        android:textSize="16sp"
+        app:backgroundTint="@color/boxBluish"
+        app:layout_constraintEnd_toEndOf="@+id/searchViewEntries"
+        app:layout_constraintStart_toStartOf="@+id/searchViewEntries"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewEntries" />
+
+    <LinearLayout
+        android:id="@+id/layoutCalendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btnSeeAllEntries"
+        app:layout_constraintStart_toStartOf="@+id/btnSeeAllEntries"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeAllEntries">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:verticalScrollbarPosition="defaultPosition"
+            android:visibility="visible"
+            android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

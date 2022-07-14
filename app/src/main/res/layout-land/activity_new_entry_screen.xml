@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".NewEntryScreen">
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_purple"
+        android:gravity="center"
+        android:text="@string/stringThinkingAbout"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDatePicker"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDatePicker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@xml/rounded_box_bluish"
+        android:ems="10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:hint="Enter date"
+        android:textColor="@color/white"
+        android:textColorHint="#BBB5DC"
+        android:textColorLink="#9A9A9A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitle"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDatePicker"
+        app:layout_constraintStart_toStartOf="@+id/editTextDatePicker"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDatePicker">
+
+        <ImageView
+            android:id="@+id/imageViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_style" />
+
+        <TextView
+            android:id="@+id/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringStyle"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Location: not set"
+        android:textColor="@color/mainText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutAddLocation"
+        app:layout_constraintStart_toStartOf="@+id/layoutAddLocation"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAddLocation" />
+
+    <LinearLayout
+        android:id="@+id/layoutAddLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:onClick="clickAddLocation"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutAddImage"
+        app:layout_constraintStart_toStartOf="@+id/layoutAddImage"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAddImage">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/textViewAddLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringAddLocation"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutStyle"
+        app:layout_constraintStart_toStartOf="@+id/layoutStyle"
+        app:layout_constraintTop_toBottomOf="@+id/layoutStyle">
+
+        <ImageView
+            android:id="@+id/imageViewAddImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_add_image" />
+
+        <TextView
+            android:id="@+id/textViewAddImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringAddImage"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@xml/border"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="start|top"
+        android:hint="Dear diary..."
+        android:inputType="textMultiLine"
+        android:textColor="@color/mainText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickSave"
+        android:text="@string/stringSave"
+        app:backgroundTint="@color/boxBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextEntry"
+        app:layout_constraintEnd_toEndOf="@+id/layoutAddLocation"
+        app:layout_constraintStart_toStartOf="@+id/layoutAddLocation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

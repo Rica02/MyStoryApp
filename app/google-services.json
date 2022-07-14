@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "423438301422",
+    "firebase_url": "https://mystory-app-1627179989007-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mystory-app-1627179989007",
+    "storage_bucket": "mystory-app-1627179989007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423438301422:android:1c58c8accbe3c7c2531bff",
+        "android_client_info": {
+          "package_name": "com.example.mystoryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423438301422-7qillaq2to7qvsk7svf0s2qc9ggp2p75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mystoryapp",
+            "certificate_hash": "dbbf05b1335565b78434e0c07f1b44f98e093413"
+          }
+        },
+        {
+          "client_id": "423438301422-93eab81surlp5brjinr5fjdffpk3ricm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mystoryapp",
+            "certificate_hash": "1fefb71d67949ed91ffebdbe4878a9e46d389780"
+          }
+        },
+        {
+          "client_id": "423438301422-1kh2hu9qgvos05rmr610vphihqmjganf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAVIuqkkfilBkF4qxsHXtnSeyBKmL5o08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423438301422-1kh2hu9qgvos05rmr610vphihqmjganf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

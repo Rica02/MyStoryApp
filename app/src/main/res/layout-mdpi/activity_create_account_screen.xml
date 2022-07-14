@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountScreen">
+
+    <LinearLayout
+        android:id="@+id/layoutCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:background="@xml/rounded_box_purple"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/stringCreateAccount"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="351dp"
+            android:layout_height="93dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_profile" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextCreateUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@xml/border"
+        android:ems="10"
+        android:hint="@string/stringUsername"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/layoutCreateAccount"
+        app:layout_constraintStart_toStartOf="@+id/layoutCreateAccount"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCreateAccount" />
+
+    <EditText
+        android:id="@+id/editTextCreateEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@xml/border"
+        android:ems="10"
+        android:hint="@string/stringEmail"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCreateUsername"
+        app:layout_constraintStart_toStartOf="@+id/editTextCreateUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreateUsername" />
+
+    <EditText
+        android:id="@+id/editTextCreatePassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@xml/border"
+        android:ems="10"
+        android:hint="@string/stringPassword"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCreateEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextCreateEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreateEmail" />
+
+    <EditText
+        android:id="@+id/editTextCreateConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@xml/border"
+        android:ems="10"
+        android:hint="@string/stringConfirmPassword"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCreatePassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextCreatePassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreatePassword" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="clickRegister"
+        android:text="@string/stringRegister"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="@+id/textViewValidationError"
+        app:layout_constraintStart_toStartOf="@+id/textViewValidationError"
+        app:layout_constraintTop_toBottomOf="@+id/textViewValidationError" />
+
+    <TextView
+        android:id="@+id/textViewValidationError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="[error message here]"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCreateConfirm"
+        app:layout_constraintStart_toStartOf="@+id/editTextCreateConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreateConfirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

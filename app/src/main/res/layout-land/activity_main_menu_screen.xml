@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".MainMenuScreen">
+
+    <LinearLayout
+        android:id="@+id/layoutMainMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_purple"
+        android:gravity="center_vertical"
+        android:onClick="clickProfile"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewWhatDo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="62dp"
+            android:layout_height="57dp"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Welcome back, username"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewWhatDo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@xml/rounded_box_bluish"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/stringWhatDo"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutMainMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/layoutMainMenu"
+        app:layout_constraintTop_toTopOf="@+id/layoutMainMenu" />
+
+    <LinearLayout
+        android:id="@+id/layoutNewEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:onClick="clickNewEntry"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutMainMenu"
+        app:layout_constraintStart_toStartOf="@+id/layoutMainMenu"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMainMenu">
+
+        <ImageView
+            android:id="@+id/imageViewNewEntry"
+            android:layout_width="298dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_new_entry" />
+
+        <TextView
+            android:id="@+id/textViewNewEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringNewEntry"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutViewCalendar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:onClick="clickViewCalendar"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutNewEntry"
+        app:layout_constraintEnd_toEndOf="@+id/textViewWhatDo"
+        app:layout_constraintStart_toStartOf="@+id/textViewWhatDo"
+        app:layout_constraintTop_toTopOf="@+id/layoutNewEntry">
+
+        <ImageView
+            android:id="@+id/imageViewViewCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/textViewViewCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringViewCalendar"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutViewEntries"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:onClick="clickViewEntries"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutNewEntry"
+        app:layout_constraintStart_toStartOf="@+id/layoutNewEntry"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNewEntry">
+
+        <ImageView
+            android:id="@+id/imageViewViewEntries"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_entries" />
+
+        <TextView
+            android:id="@+id/textViewViewEntries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringViewEntries"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutViewStats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:onClick="clickViewStats"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutViewEntries"
+        app:layout_constraintEnd_toStartOf="@+id/layoutSettings"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/layoutViewEntries"
+        app:layout_constraintTop_toTopOf="@+id/layoutViewEntries">
+
+        <ImageView
+            android:id="@+id/imageViewStats"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_stats" />
+
+        <TextView
+            android:id="@+id/textViewViewStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringViewStats"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSettings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:onClick="clickSettings"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutViewStats"
+        app:layout_constraintEnd_toEndOf="@+id/layoutViewCalendar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/layoutViewStats"
+        app:layout_constraintTop_toTopOf="@+id/layoutViewStats">
+
+        <ImageView
+            android:id="@+id/imageViewSettings"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <TextView
+            android:id="@+id/textViewSettingsMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringSettings"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@xml/rounded_box_blue"
+        android:gravity="center"
+        android:onClick="clickLogout"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/layoutSettings"
+        app:layout_constraintStart_toStartOf="@+id/layoutViewEntries"
+        app:layout_constraintTop_toBottomOf="@+id/layoutViewEntries">
+
+        <ImageView
+            android:id="@+id/imageViewLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            app:srcCompat="@drawable/ic_logout" />
+
+        <TextView
+            android:id="@+id/textViewLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stringLogout"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

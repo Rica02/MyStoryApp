@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".StatsScreen">
+
+    <LinearLayout
+        android:id="@+id/layoutStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:background="@xml/rounded_box_purple"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="92dp"
+            android:layout_height="57dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/ic_stats" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:padding="2dp"
+            android:text="STATS"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutStatsInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@xml/border"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/layoutStats"
+        app:layout_constraintStart_toStartOf="@+id/layoutStats"
+        app:layout_constraintTop_toBottomOf="@+id/layoutStats">
+
+        <TextView
+            android:id="@+id/textViewTotalEntries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@xml/border_bottom"
+            android:padding="20dp"
+            android:text="Total entries:"
+            android:textColor="@color/mainText"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewLocationsRecorded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@xml/border_bottom"
+            android:padding="20dp"
+            android:text="Total locations recorded:"
+            android:textColor="@color/mainText"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewImagesUploaded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Total images uploaded:"
+            android:textColor="@color/mainText"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
